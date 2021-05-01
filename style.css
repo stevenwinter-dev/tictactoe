@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    color: white;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    margin: 2rem;
+}
+
+.game-board {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.cell {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+}
+
+.cell:hover {
+    border-color: deeppink; 
+}
+
+
+.cell:nth-child(-n+3) {
+    border-top: none;
+}
+
+.cell:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(1) {
+    border-top-left-radius: 50px;
+}
+
+.cell:nth-child(3) {
+    border-top-right-radius: 50px;
+}
+
+.cell:nth-child(7) {
+    border-bottom-left-radius: 50px;
+}
+
+.cell:nth-child(9) {
+    border-bottom-right-radius: 50px;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: deeppink;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#play-again {
+    background-color: forestgreen;
+}
+
+.selectedX {
+    background-color: rgba(40, 30, 173, 0.4);
+}
+
+.selectedO {
+    background-color: rgba(182, 28, 28, 0.4);
+}
